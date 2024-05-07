@@ -1,2 +1,2 @@
 # LinuxForensics
-Forensics for Linux
+ Scripts for Linux Forensics
