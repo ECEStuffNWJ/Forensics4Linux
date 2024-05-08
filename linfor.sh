@@ -10,54 +10,54 @@ script /tmp/F4L.txt
 
 # Last user login
 echo "Showing last logged in users..."
-$ lastlog
-$ last
+lastlog
+last
 
 # Users with login shells
 echo "Showing login shells..."
-$ cat /etc/passwd | grep sh$
+cat /etc/passwd | grep sh$
 
 # List users’ cron
 echo "Showing cron users..."
-$ for user in $(cat /etc/passwd | cut -f1 -d: ); do echo $user; crontab -u $user -l; done
+for user in $(cat /etc/passwd | cut -f1 -d: ); do echo $user; crontab -u $user -l; done
 
 # users with shells only
 echo "Showing shells only..."
-$ for user in $(cat /etc/passwd | grep sh$ | cut -f1 -d: ); do echo $user; crontab -u $user -l; done
+for user in $(cat /etc/passwd | grep sh$ | cut -f1 -d: ); do echo $user; crontab -u $user -l; done
 
 # SSH authorized keys
 echo "Showing SSH auth keys..."
-$ find / -type f -name authorized_keys
+find / -type f -name authorized_keys
 
 # Show process tree with username, TTY, and wide output.
 echo "Showing TTY Process ..."
-$ ps auxfww
+ps auxfww
 
 # Process details
 echo "Showing process details..."
-$ lsof -p [pid]
+lsof -p [pid]
 
 # Show all connections don’t resolve names (IP only)
 echo "Showing conections..."
-$ lsof -i -n
-$ netstat -anp
+lsof -i -n
+netstat -anp
 
 # Look for tcp only
 echo "Showing tcp..."
-$ netstat -antp
-$ ss -antp
+netstat -antp
+ss -antp
 
 # List all services
 echo "Showing lall services..."
-$ service --status-all
+service --status-all
 
 # List firewall rules
 echo "Showing firewall rules..."
-$ iptables --list-rules
+iptables --list-rules
 
 # List all timers
 echo "Showing timers..."
-$ systemctl list-timers --all
+systemctl list-timers --all
 
 # Look to these file to see if the DNS has been poisoned.
 echo "Showing DNS poisioning..."
@@ -67,27 +67,27 @@ cat /etc/resolv.conf
 # Files and Folders
 Show list files and folder with nano timestamp, sort by modification time (newest).
 echo "Showing nano tmestamps..."
-$ ls --full-time -lt
+ls --full-time -lt
 
 # List all files that were modified on a specific date/time. 
 echo "Showing file edits..."
-$ find / -newermt "2021-06-24" -ls 2>/dev/null
+find / -newermt "2021-06-24" -ls 2>/dev/null
 
 # List files which were modified 9 days ago
 echo "Showing file edits 9 days ago..."
-$ find / -newermt "2021-05-24" ! -newermt "2021-05-24" -ls 2>/dev/null
+find / -newermt "2021-05-24" ! -newermt "2021-05-24" -ls 2>/dev/null
 
 # List files modified between 01:00 and 07:00 on June 16 2024.
 echo "Showing file edits..."
-$ find / -newermt "2024-06-16 01:00:00" ! -newermt "2024-06-16 07:00:00" -ls 2>/dev/null
+find / -newermt "2024-06-16 01:00:00" ! -newermt "2024-06-16 07:00:00" -ls 2>/dev/null
 
 # List files that were accessed exactly 2 days ago.
 echo "Showing files accese last 2 days..."
-$ find / -atime 2 -ls 2>/dev/null
+find / -atime 2 -ls 2>/dev/null
 
 # List files that were modified in the last 2 days.
 echo "Showing files mofified 2 days ago..."
-$ find / -mtime -2 -ls 2>/dev/null
+find / -mtime -2 -ls 2>/dev/null
 
 # EDIT FOR FILE INSPECTION
 # File inspection
@@ -97,21 +97,21 @@ $ find / -mtime -2 -ls 2>/dev/null
 
 # Observe changes in files
 echo "Showing file changes..."
-$ find . -type f -exec md5sum {} \; | awk '{print $1}' | sort | uniq -c | grep ' 1 ' | awk '{print $2	}'
+find . -type f -exec md5sum {} \; | awk '{print $1}' | sort | uniq -c | grep ' 1 ' | awk '{print $2	}'
 
 # Look for cap_setuid+ep in binary capabilities
 echo "Showing SET UID..."
-$ getcap -r /usr/bin/
-$ getcap -r /bin/
-$ getcap -r / 2>/dev/null
+getcap -r /usr/bin/
+getcap -r /bin/
+getcap -r / 2>/dev/null
 
 # SUID
 echo "Showing SUId..."
-$ find / -type f -perm -u=s 2>/dev/null
+find / -type f -perm -u=s 2>/dev/null
 
 # Log auditing 3rd party
 echo "Showing auditing..."
-$ aureport --tty
+aureport --tty
 
 # EDIT FOR PERSISTENCE IN DIRECTORIES
 # Persistence areas Directories and Files
@@ -408,5 +408,5 @@ echo "Script execution completed."
 
 # format txt file
 cd /tmp
-sed li1 /! " Forensics4Linux Output _____________________ " > Forensics4Linux.txt
-sed li1 /! " F4L Output ________________________________ " > F4L.txt
+sed -i '1i FORENSICS4LINUX OUTPUT _________________________ ' > Forensics4Linux.txt
+sed -i '1i F4L OUTPUT FILE ________________________________ ' > F4L.txt
