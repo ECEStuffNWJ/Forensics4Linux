@@ -1,5 +1,6 @@
 # Forensics4Linux
- Scripts for Linux Forensics. Output to a txt file.
+ Scripts for Linux Forensics.  
+ Output to a formatted .txt file for further analysis.
 
 # Install
 git clone https://github.com/ECEStuffNWJ/Forensics4Linux.git
