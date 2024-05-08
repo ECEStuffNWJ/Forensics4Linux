@@ -358,3 +358,7 @@ adb forward tcp:4444 tcp:4444
 adb shell
 su
 insmod /sdcard/lime.ko "path=tcp:4444 format=lime"
+
+# format txt file
+cd /tmp
+sed li1 /! " Forensics4Linux Output _____________________ " > Forensics4Linux.txt
