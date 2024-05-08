@@ -5,7 +5,8 @@
 git clone https://github.com/ECEStuffNWJ/Forensics4Linux.git
 
 # Run
-cd Forensics4Linux; 
-chmod +x linfor.sh; 
+cd Forensics4Linux ; 
+chmod +x linfor.sh ;  
 ./linfor.sh
+
  
