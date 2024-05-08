@@ -1,6 +1,6 @@
 # Forensics4Linux
  Script for Linux Forensics in BASH.  
- Tested on Ubuntu 22 and 24 LTS; Kali Linux; Parrot Linux.  
+ Tested on Debian 12, Ubuntu 22/24 LTS; Kali Linux; Parrot Linux.  
  Output to a formatted .txt file for further analysis.
 
 # Install
