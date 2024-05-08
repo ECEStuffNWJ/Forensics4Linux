@@ -13,5 +13,8 @@ chmod +x linfor.sh ;
 cd /tmp and look for Forensics4Linux.txt
 
 # Author
-Nathan w Jones ducatinat@gmail.com
+Nathan W Jones ducatinat@gmail.com
+
+# CPD
+Part of EC-Council CPD/ECE credits
  
