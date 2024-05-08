@@ -1,4 +1,9 @@
 #!/bin/bash
+# Written by Nathan W Jones ducatinat@gmail.com
+# This script runs forensic tools on the local machine. 
+# MAINTAIN THE CHAIN OF CUSTODY AT ALL TIMES
+# Output to Forensics4Linux.txt and F4L.txt, both in /tmp
+# Compare the two files as each uses a slightly different apparoach.
 
 # first run
 script /tmp/F4L.txt
@@ -9,7 +14,7 @@ $ lastlog
 $ last
 
 # Users with login shells
-echo "Showing laogin shellss..."
+echo "Showing login shells..."
 $ cat /etc/passwd | grep sh$
 
 # List users’ cron
