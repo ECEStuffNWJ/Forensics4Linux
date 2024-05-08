@@ -10,5 +10,5 @@ chmod +x linfor.sh ;
 ./linfor.sh
 
 # Results
-cd /tmp and look for .txt
+cd /tmp and look for Forensics4Linux.txt
  
