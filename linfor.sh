@@ -160,12 +160,8 @@ echo $PATH
 echo "--------------------------------------"
 echo "Script execution completed."
 
-
-
-
-
-#########################################################################################3
-#!/bin/#!/usr/bin/env bash
+# second run
+script /tmp/F4L.txt
 
 # Last user login
 $ lastlog
@@ -358,7 +354,10 @@ adb forward tcp:4444 tcp:4444
 adb shell
 su
 insmod /sdcard/lime.ko "path=tcp:4444 format=lime"
+exit
+
 
 # format txt file
 cd /tmp
 sed li1 /! " Forensics4Linux Output _____________________ " > Forensics4Linux.txt
+sed li1 /! " Fo4L Output ________________________________ " > F4L.txt
