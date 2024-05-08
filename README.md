@@ -5,9 +5,9 @@
 git clone https://github.com/ECEStuffNWJ/Forensics4Linux.git
 
 # Run
-cd Forensics4Linux ; 
-chmod +x linfor.sh ;  
-./linfor.sh
+cd Forensics4Linux ;  
+chmod +x linfor.sh ;   
+./linfor.sh 
 
 # Results
 cd /tmp and look for Forensics4Linux.txt
