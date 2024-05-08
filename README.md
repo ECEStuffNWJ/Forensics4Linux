@@ -9,4 +9,6 @@ cd Forensics4Linux ;
 chmod +x linfor.sh ;  
 ./linfor.sh
 
+# Results
+cd /tmp and look for .txt
  
