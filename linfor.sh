@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Redirecting output to IRLinux.txt in /tmp/ directory
+# Redirecting output to Forensics4Linux.txt in /tmp/ directory
 exec > /tmp/Forensics4Linux.txt 2>&1
 
 echo "Incident Response Linux Investigation"
